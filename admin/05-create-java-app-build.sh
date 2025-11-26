@@ -60,7 +60,7 @@ spec:
     type: string
   tasks:
   - name: fetch-repository
-    retries: 5
+    retries: 2
     params:
     - name: URL
       value: \$(params.GIT_REPO)
@@ -83,7 +83,7 @@ spec:
     - name: output
       workspace: shared-workspace
   - name: build
-    retries: 5
+    retries: 2
     params:
     - name: IMAGE
       value: \$(params.IMAGE_REGISTRY)/\$(params.NAMESPACE)/\$(params.SUBDIRECTORY)
